@@ -9,7 +9,7 @@ const CATALOG_ITEMS = [
     brand: "Urban Flow",
     price: "4 990 ₽",
     tag: "Хит",
-    tagColor: "bg-pink-500",
+    tagColor: "bg-rose-300",
     img: "https://cdn.poehali.dev/projects/613e8477-c04e-4838-96e3-30ad0aee84a6/files/2f035610-8c93-4b6d-b874-4f2f546888de.jpg",
   },
   {
@@ -19,7 +19,7 @@ const CATALOG_ITEMS = [
     brand: "SoleKing",
     price: "8 500 ₽",
     tag: "Новинка",
-    tagColor: "bg-cyan-500",
+    tagColor: "bg-teal-400",
     img: "https://cdn.poehali.dev/projects/613e8477-c04e-4838-96e3-30ad0aee84a6/files/0dc8adf6-e946-458b-83c4-a5a547d06b40.jpg",
   },
   {
@@ -29,7 +29,7 @@ const CATALOG_ITEMS = [
     brand: "GoldRush",
     price: "2 200 ₽",
     tag: "Тренд",
-    tagColor: "bg-yellow-400",
+    tagColor: "bg-amber-300",
     img: "https://cdn.poehali.dev/projects/613e8477-c04e-4838-96e3-30ad0aee84a6/files/285a4fe3-a463-487d-a2aa-99ce3b0a22c6.jpg",
   },
   {
@@ -39,7 +39,7 @@ const CATALOG_ITEMS = [
     brand: "Streetwear Co",
     price: "6 700 ₽",
     tag: "Хит",
-    tagColor: "bg-pink-500",
+    tagColor: "bg-rose-300",
     img: "https://cdn.poehali.dev/projects/613e8477-c04e-4838-96e3-30ad0aee84a6/files/2f035610-8c93-4b6d-b874-4f2f546888de.jpg",
   },
   {
@@ -49,7 +49,7 @@ const CATALOG_ITEMS = [
     brand: "VisionX",
     price: "3 100 ₽",
     tag: "Новинка",
-    tagColor: "bg-cyan-500",
+    tagColor: "bg-teal-400",
     img: "https://cdn.poehali.dev/projects/613e8477-c04e-4838-96e3-30ad0aee84a6/files/0dc8adf6-e946-458b-83c4-a5a547d06b40.jpg",
   },
   {
@@ -59,7 +59,7 @@ const CATALOG_ITEMS = [
     brand: "HeightMod",
     price: "11 000 ₽",
     tag: "Тренд",
-    tagColor: "bg-yellow-400",
+    tagColor: "bg-amber-300",
     img: "https://cdn.poehali.dev/projects/613e8477-c04e-4838-96e3-30ad0aee84a6/files/285a4fe3-a463-487d-a2aa-99ce3b0a22c6.jpg",
   },
 ];
@@ -70,21 +70,21 @@ const OUTFITS = [
     name: "Городской экспресс",
     items: ["Оверсайз худи", "Карго-джинсы", "Кроссовки Retro"],
     mood: "Casual",
-    moodColor: "from-pink-500 to-purple-600",
+    moodColor: "from-rose-300 to-purple-300",
   },
   {
     id: 2,
-    name: "Неон-вечер",
+    name: "Вечерний шарм",
     items: ["Топ сетка", "Мини-юбка", "Платформа Chunky", "Цепочка Y2K"],
     mood: "Night Out",
-    moodColor: "from-cyan-400 to-blue-600",
+    moodColor: "from-teal-300 to-blue-300",
   },
   {
     id: 3,
     name: "Офис в стиле Y2K",
     items: ["Блейзер oversized", "Карго-джинсы", "Очки Shield"],
     mood: "Smart Casual",
-    moodColor: "from-orange-400 to-pink-500",
+    moodColor: "from-amber-300 to-rose-300",
   },
 ];
 
@@ -145,9 +145,9 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen mesh-bg text-white font-body">
+    <div className="min-h-screen mesh-bg font-body" style={{ color: "hsl(25 25% 15%)" }}>
       {/* Header */}
-      <header className="sticky top-0 z-50 glass-card border-b border-white/5 px-4 py-3">
+      <header className="sticky top-0 z-50 glass-card border-b px-4 py-3" style={{ borderColor: "rgba(196,122,138,0.12)" }}>
         <div className="max-w-md mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-xl gradient-btn flex items-center justify-center">
@@ -159,7 +159,7 @@ export default function Index() {
           </div>
           <div className="flex items-center gap-3">
             {isPremium ? (
-              <span className="text-xs font-semibold px-2 py-1 rounded-full bg-yellow-400/20 text-yellow-400 border border-yellow-400/30">
+              <span className="text-xs font-semibold px-2 py-1 rounded-full border" style={{ background: "rgba(201,168,124,0.15)", color: "#a07840", borderColor: "rgba(201,168,124,0.35)" }}>
                 ✦ PREMIUM
               </span>
             ) : (
@@ -170,7 +170,7 @@ export default function Index() {
                 Premium
               </button>
             )}
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-pink-400 to-purple-600 flex items-center justify-center text-sm font-bold text-white">
+            <div className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white" style={{ background: "linear-gradient(135deg, #c47a8a, #9b8db5)" }}>
               A
             </div>
           </div>
@@ -181,20 +181,20 @@ export default function Index() {
         {/* Hero Banner */}
         {activeTab === "wardrobe" && (
           <div className="mt-5 mb-6 relative overflow-hidden rounded-2xl animate-slide-up">
-            <div className="absolute inset-0 bg-gradient-to-r from-pink-600/80 via-purple-600/60 to-cyan-500/40 z-10" />
+            <div className="absolute inset-0 z-10" style={{ background: "linear-gradient(to right, rgba(196,122,138,0.75), rgba(155,141,181,0.55), rgba(138,171,155,0.35))" }} />
             <img
               src="https://cdn.poehali.dev/projects/613e8477-c04e-4838-96e3-30ad0aee84a6/files/0dc8adf6-e946-458b-83c4-a5a547d06b40.jpg"
               alt="Fashion"
               className="w-full h-44 object-cover"
             />
             <div className="absolute inset-0 z-20 flex flex-col justify-end p-5">
-              <p className="text-xs font-semibold text-cyan-300 uppercase tracking-widest mb-1">
+              <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#e8f5f0" }}>
                 Твой гардероб
               </p>
               <h2 className="font-display text-2xl font-bold text-white leading-tight mb-3">
                 Сфотографируй вещь<br />и добавь в каталог
               </h2>
-              <button className="self-start flex items-center gap-2 bg-white text-gray-900 font-semibold text-sm px-4 py-2 rounded-full hover:bg-pink-50 transition-all">
+              <button className="self-start flex items-center gap-2 bg-white font-semibold text-sm px-4 py-2 rounded-full transition-all hover:shadow-md" style={{ color: "hsl(25 25% 15%)" }}>
                 <Icon name="Camera" size={16} />
                 Открыть камеру
               </button>
@@ -214,9 +214,10 @@ export default function Index() {
               onClick={() => setActiveTab(tab.key as typeof activeTab)}
               className={`flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 ${
                 activeTab === tab.key
-                  ? "tab-active shadow-lg"
-                  : "text-white/50 hover:text-white/80"
+                  ? "tab-active shadow-md"
+                  : "hover:opacity-70"
               }`}
+              style={activeTab !== tab.key ? { color: "hsl(25 10% 50%)" } : {}}
             >
               <Icon name={tab.icon} size={15} />
               {tab.label}
@@ -233,10 +234,9 @@ export default function Index() {
                   key={cat}
                   onClick={() => setActiveFilter(cat)}
                   className={`shrink-0 px-4 py-1.5 rounded-full text-sm font-semibold transition-all duration-200 ${
-                    activeFilter === cat
-                      ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg"
-                      : "glass-card text-white/60 hover:text-white"
+                    activeFilter === cat ? "tab-active shadow-md" : "glass-card hover:shadow-sm"
                   }`}
+                  style={activeFilter !== cat ? { color: "hsl(25 10% 45%)" } : {}}
                 >
                   {cat}
                 </button>
@@ -256,39 +256,33 @@ export default function Index() {
                       alt={item.name}
                       className="w-full h-36 object-cover"
                     />
-                    <span
-                      className={`absolute top-2 left-2 text-xs font-bold text-white px-2 py-0.5 rounded-full ${item.tagColor}`}
-                    >
+                    <span className={`absolute top-2 left-2 text-xs font-bold text-white px-2 py-0.5 rounded-full ${item.tagColor}`}>
                       {item.tag}
                     </span>
                     <button
                       onClick={() => toggleLike(item.id)}
-                      className="absolute top-2 right-2 w-8 h-8 glass-card rounded-full flex items-center justify-center transition-transform active:scale-90"
+                      className="absolute top-2 right-2 w-8 h-8 rounded-full flex items-center justify-center transition-transform active:scale-90 bg-white/80 backdrop-blur"
                     >
                       <Icon
                         name="Heart"
                         size={14}
-                        className={
-                          likedItems.includes(item.id)
-                            ? "fill-pink-500 text-pink-500"
-                            : "text-white/60"
-                        }
+                        className={likedItems.includes(item.id) ? "fill-rose-400 text-rose-400" : "text-stone-400"}
                       />
                     </button>
                   </div>
                   <div className="p-3">
-                    <p className="text-xs text-white/40 mb-0.5">{item.brand}</p>
-                    <p className="font-semibold text-sm leading-tight mb-1">{item.name}</p>
+                    <p className="text-xs mb-0.5" style={{ color: "hsl(25 10% 55%)" }}>{item.brand}</p>
+                    <p className="font-semibold text-sm leading-tight mb-1" style={{ color: "hsl(25 25% 18%)" }}>{item.name}</p>
                     <p className="font-display font-bold text-base gradient-text">{item.price}</p>
                   </div>
                 </div>
               ))}
 
-              <div className="glass-card rounded-2xl overflow-hidden card-hover border-2 border-dashed border-white/10 flex flex-col items-center justify-center h-48 cursor-pointer hover:border-pink-500/40 transition-all group">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500/20 to-purple-600/20 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
-                  <Icon name="Plus" size={22} className="text-pink-400" />
+              <div className="rounded-2xl overflow-hidden card-hover border-2 border-dashed flex flex-col items-center justify-center h-48 cursor-pointer transition-all group" style={{ borderColor: "rgba(196,122,138,0.25)", background: "rgba(196,122,138,0.04)" }}>
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mb-2 group-hover:scale-110 transition-transform" style={{ background: "rgba(196,122,138,0.12)" }}>
+                  <Icon name="Plus" size={22} className="text-rose-400" />
                 </div>
-                <p className="text-sm text-white/40 group-hover:text-white/70 transition-colors font-semibold">
+                <p className="text-sm font-semibold" style={{ color: "hsl(25 10% 55%)" }}>
                   Добавить вещь
                 </p>
               </div>
@@ -299,27 +293,23 @@ export default function Index() {
         {/* OUTFITS TAB */}
         {activeTab === "outfits" && (
           <div className="animate-fade-in space-y-4">
-            <div className="relative overflow-hidden rounded-2xl p-4 bg-gradient-to-r from-purple-600 to-pink-600">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+            {/* AI suggestion */}
+            <div className="relative overflow-hidden rounded-2xl p-4" style={{ background: "linear-gradient(135deg, #c47a8a, #9b8db5)" }}>
+              <div className="absolute top-0 right-0 w-24 h-24 rounded-full -translate-y-1/2 translate-x-1/2" style={{ background: "rgba(255,255,255,0.08)" }} />
               <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-2">
-                  <Icon name="Sparkles" size={16} className="text-yellow-300" />
-                  <span className="text-xs font-bold text-yellow-300 uppercase tracking-wide">
+                  <Icon name="Sparkles" size={16} className="text-amber-200" />
+                  <span className="text-xs font-bold uppercase tracking-wide text-amber-200">
                     ИИ-советник
                   </span>
                 </div>
-                <p className="font-display text-xl font-bold text-white mb-1">
-                  Образ на сегодня
-                </p>
-                <p className="text-sm text-white/70 mb-3">
+                <p className="font-display text-xl font-bold text-white mb-1">Образ на сегодня</p>
+                <p className="text-sm mb-3" style={{ color: "rgba(255,255,255,0.75)" }}>
                   Понедельник, 11 мая · Солнечно, +18°C
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {["Оверсайз худи", "Карго-джинсы", "Кроссовки Retro"].map((item) => (
-                    <span
-                      key={item}
-                      className="text-xs bg-white/20 backdrop-blur rounded-full px-3 py-1 text-white font-medium"
-                    >
+                    <span key={item} className="text-xs rounded-full px-3 py-1 font-medium text-white" style={{ background: "rgba(255,255,255,0.2)" }}>
                       {item}
                     </span>
                   ))}
@@ -328,57 +318,44 @@ export default function Index() {
             </div>
 
             <div className="flex items-center justify-between">
-              <h3 className="font-display text-lg font-bold">Мои образы</h3>
-              <button className="text-xs text-pink-400 font-semibold hover:text-pink-300">
+              <h3 className="font-display text-lg font-bold" style={{ color: "hsl(25 25% 15%)" }}>Мои образы</h3>
+              <button className="text-xs font-semibold" style={{ color: "#c47a8a" }}>
                 + Создать новый
               </button>
             </div>
 
             {OUTFITS.map((outfit, i) => (
-              <div
-                key={outfit.id}
-                className="glass-card rounded-2xl p-4 card-hover"
-                style={{ animationDelay: `${i * 0.08}s` }}
-              >
+              <div key={outfit.id} className="glass-card rounded-2xl p-4 card-hover" style={{ animationDelay: `${i * 0.08}s` }}>
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <div
-                      className={`inline-flex items-center gap-1 text-xs font-bold px-2 py-0.5 rounded-full bg-gradient-to-r ${outfit.moodColor} text-white mb-2`}
-                    >
+                    <div className={`inline-flex items-center gap-1 text-xs font-bold px-2 py-0.5 rounded-full bg-gradient-to-r ${outfit.moodColor} text-white mb-2`}>
                       {outfit.mood}
                     </div>
-                    <h4 className="font-display text-lg font-bold">{outfit.name}</h4>
+                    <h4 className="font-display text-lg font-bold" style={{ color: "hsl(25 25% 15%)" }}>{outfit.name}</h4>
                   </div>
                   <button
                     onClick={() => toggleSave(outfit.id)}
-                    className="w-9 h-9 glass-card rounded-full flex items-center justify-center transition-transform active:scale-90"
+                    className="w-9 h-9 rounded-full flex items-center justify-center transition-transform active:scale-90 bg-white/80"
                   >
                     <Icon
                       name="Bookmark"
                       size={16}
-                      className={
-                        savedOutfits.includes(outfit.id)
-                          ? "fill-yellow-400 text-yellow-400"
-                          : "text-white/40"
-                      }
+                      className={savedOutfits.includes(outfit.id) ? "fill-amber-400 text-amber-400" : "text-stone-300"}
                     />
                   </button>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {outfit.items.map((item) => (
-                    <span
-                      key={item}
-                      className="text-xs bg-white/8 border border-white/10 rounded-full px-3 py-1 text-white/70 font-medium"
-                    >
+                    <span key={item} className="text-xs rounded-full px-3 py-1 font-medium" style={{ background: "rgba(196,122,138,0.08)", color: "hsl(25 25% 35%)", border: "1px solid rgba(196,122,138,0.15)" }}>
                       {item}
                     </span>
                   ))}
                 </div>
                 <div className="mt-3 flex gap-2">
-                  <button className="flex-1 py-2 rounded-xl bg-white/5 border border-white/10 text-sm text-white/70 font-semibold hover:bg-white/10 transition-all">
+                  <button className="flex-1 py-2 rounded-xl text-sm font-semibold transition-all hover:shadow-sm" style={{ background: "rgba(196,122,138,0.07)", border: "1px solid rgba(196,122,138,0.15)", color: "hsl(25 25% 35%)" }}>
                     Надеть сегодня
                   </button>
-                  <button className="flex-1 py-2 rounded-xl gradient-btn text-white text-sm font-semibold">
+                  <button className="flex-1 py-2 rounded-xl text-white text-sm font-semibold gradient-btn">
                     Редактировать
                   </button>
                 </div>
@@ -386,20 +363,19 @@ export default function Index() {
             ))}
 
             {!isPremium && (
-              <div className="relative overflow-hidden rounded-2xl p-5 border border-yellow-400/20 bg-yellow-400/5">
-                <div className="absolute -top-6 -right-6 w-28 h-28 bg-yellow-400/10 rounded-full blur-xl" />
+              <div className="relative overflow-hidden rounded-2xl p-5 border" style={{ borderColor: "rgba(201,168,124,0.25)", background: "rgba(201,168,124,0.06)" }}>
+                <div className="absolute -top-6 -right-6 w-28 h-28 rounded-full blur-xl" style={{ background: "rgba(201,168,124,0.15)" }} />
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-lg">✦</span>
-                  <span className="font-display text-base font-bold text-yellow-400">
-                    Premium образы
-                  </span>
+                  <span className="font-display text-base font-bold" style={{ color: "#a07840" }}>Premium образы</span>
                 </div>
-                <p className="text-sm text-white/60 mb-3">
+                <p className="text-sm mb-3" style={{ color: "hsl(25 10% 45%)" }}>
                   Получи доступ к ИИ-стилисту, персональным рекомендациям и 500+ эксклюзивным образам
                 </p>
                 <button
                   onClick={() => setIsPremium(true)}
-                  className="w-full py-2.5 rounded-xl bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 font-bold text-sm hover:opacity-90 transition-all"
+                  className="w-full py-2.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90"
+                  style={{ background: "linear-gradient(135deg, #c9a87c, #c47a8a)" }}
                 >
                   Попробовать 7 дней бесплатно
                 </button>
@@ -412,8 +388,8 @@ export default function Index() {
         {activeTab === "trends" && (
           <div className="animate-fade-in">
             <div className="flex items-center gap-2 mb-5">
-              <div className="w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
-              <p className="text-sm text-white/50">Актуально для сезона SS/FW 2026</p>
+              <div className="w-2 h-2 rounded-full bg-rose-300 animate-pulse" />
+              <p className="text-sm" style={{ color: "hsl(25 10% 55%)" }}>Актуально для сезона SS/FW 2026</p>
             </div>
 
             <div className="relative overflow-hidden rounded-2xl mb-5">
@@ -422,54 +398,40 @@ export default function Index() {
                 alt="Fashion Show"
                 className="w-full h-40 object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(30,15,20,0.80), rgba(30,15,20,0.15), transparent)" }} />
               <div className="absolute bottom-0 left-0 right-0 p-4">
-                <p className="text-xs text-cyan-400 font-semibold uppercase tracking-widest mb-1">
+                <p className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#8aab9b" }}>
                   Прямой эфир
                 </p>
-                <p className="font-display text-xl font-bold text-white">
-                  Paris Fashion Week 2026
-                </p>
+                <p className="font-display text-xl font-bold text-white">Paris Fashion Week 2026</p>
               </div>
-              <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-red-500 rounded-full px-2.5 py-1">
+              <div className="absolute top-3 right-3 flex items-center gap-1.5 bg-rose-400 rounded-full px-2.5 py-1">
                 <div className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
                 <span className="text-xs font-bold text-white">LIVE</span>
               </div>
             </div>
 
-            <h3 className="font-display text-lg font-bold mb-3">Горячие тренды</h3>
+            <h3 className="font-display text-lg font-bold mb-3" style={{ color: "hsl(25 25% 15%)" }}>Горячие тренды</h3>
             <div className="space-y-3">
               {TRENDS.map((trend, i) => (
-                <div
-                  key={trend.id}
-                  className="glass-card rounded-2xl overflow-hidden card-hover"
-                  style={{ animationDelay: `${i * 0.08}s` }}
-                >
+                <div key={trend.id} className="glass-card rounded-2xl overflow-hidden card-hover" style={{ animationDelay: `${i * 0.08}s` }}>
                   <div className="flex">
-                    <img
-                      src={trend.img}
-                      alt={trend.brand}
-                      className="w-28 h-28 object-cover shrink-0"
-                    />
+                    <img src={trend.img} alt={trend.brand} className="w-28 h-28 object-cover shrink-0" />
                     <div className="p-4 flex flex-col justify-between flex-1">
                       <div>
                         <div className="flex items-center gap-2 mb-1">
-                          <span className="text-xs font-bold text-white/40 uppercase tracking-wide">
-                            {trend.brand}
-                          </span>
-                          <span className="text-xs text-white/30">{trend.season}</span>
+                          <span className="text-xs font-bold uppercase tracking-wide" style={{ color: "hsl(25 10% 55%)" }}>{trend.brand}</span>
+                          <span className="text-xs" style={{ color: "hsl(25 10% 65%)" }}>{trend.season}</span>
                           {trend.hot && (
-                            <span className="text-xs bg-pink-500/20 text-pink-400 border border-pink-500/30 rounded-full px-1.5 py-0.5 font-semibold">
+                            <span className="text-xs rounded-full px-1.5 py-0.5 font-semibold" style={{ background: "rgba(196,122,138,0.12)", color: "#c47a8a", border: "1px solid rgba(196,122,138,0.2)" }}>
                               🔥
                             </span>
                           )}
                         </div>
-                        <h4 className="font-display text-base font-bold text-white mb-1">
-                          {trend.title}
-                        </h4>
-                        <p className="text-xs text-white/50 leading-relaxed">{trend.desc}</p>
+                        <h4 className="font-display text-base font-bold mb-1" style={{ color: "hsl(25 25% 15%)" }}>{trend.title}</h4>
+                        <p className="text-xs leading-relaxed" style={{ color: "hsl(25 10% 50%)" }}>{trend.desc}</p>
                       </div>
-                      <button className="mt-2 self-start text-xs text-cyan-400 font-semibold hover:text-cyan-300 transition-colors flex items-center gap-1">
+                      <button className="mt-2 self-start text-xs font-semibold transition-colors flex items-center gap-1" style={{ color: "#8aab9b" }}>
                         Подробнее
                         <Icon name="ArrowRight" size={12} />
                       </button>
@@ -480,19 +442,18 @@ export default function Index() {
             </div>
 
             {!isPremium && (
-              <div className="mt-4 relative overflow-hidden rounded-2xl p-5 border border-purple-500/20 bg-purple-500/5">
+              <div className="mt-4 relative overflow-hidden rounded-2xl p-5 border" style={{ borderColor: "rgba(155,141,181,0.25)", background: "rgba(155,141,181,0.06)" }}>
                 <div className="flex items-center gap-2 mb-2">
-                  <Icon name="Lock" size={16} className="text-purple-400" />
-                  <span className="font-display text-base font-bold text-purple-400">
-                    Эксклюзивные тренды
-                  </span>
+                  <Icon name="Lock" size={16} style={{ color: "#9b8db5" }} />
+                  <span className="font-display text-base font-bold" style={{ color: "#9b8db5" }}>Эксклюзивные тренды</span>
                 </div>
-                <p className="text-sm text-white/60 mb-3">
+                <p className="text-sm mb-3" style={{ color: "hsl(25 10% 45%)" }}>
                   Прогнозы на 6 месяцев вперёд, закрытые показы и аналитика от топ-стилистов
                 </p>
                 <button
                   onClick={() => setIsPremium(true)}
-                  className="w-full py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-sm hover:opacity-90 transition-all"
+                  className="w-full py-2.5 rounded-xl text-white font-bold text-sm hover:opacity-90 transition-all"
+                  style={{ background: "linear-gradient(135deg, #9b8db5, #c47a8a)" }}
                 >
                   Открыть Premium доступ
                 </button>
@@ -505,7 +466,7 @@ export default function Index() {
       {/* Bottom Nav */}
       <nav className="fixed bottom-0 left-0 right-0 z-50">
         <div className="max-w-md mx-auto px-4 pb-4">
-          <div className="glass-card rounded-2xl border border-white/8 px-2 py-3 flex items-center justify-around">
+          <div className="glass-card rounded-2xl px-2 py-3 flex items-center justify-around">
             {[
               { key: "wardrobe", icon: "Shirt", label: "Гардероб" },
               { key: "outfits", icon: "Sparkles", label: "Образы" },
@@ -517,16 +478,13 @@ export default function Index() {
                 onClick={() => {
                   if (nav.key !== "profile") setActiveTab(nav.key as typeof activeTab);
                 }}
-                className={`flex flex-col items-center gap-1 px-4 py-1 rounded-xl transition-all duration-200 ${
-                  activeTab === nav.key
-                    ? "text-pink-400"
-                    : "text-white/30 hover:text-white/60"
-                }`}
+                className="flex flex-col items-center gap-1 px-4 py-1 rounded-xl transition-all duration-200"
+                style={{ color: activeTab === nav.key ? "#c47a8a" : "hsl(25 10% 60%)" }}
               >
                 <div className={`relative ${activeTab === nav.key ? "animate-float" : ""}`}>
                   <Icon name={nav.icon} size={20} />
                   {activeTab === nav.key && (
-                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-pink-400" />
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-rose-400" />
                   )}
                 </div>
                 <span className="text-xs font-semibold">{nav.label}</span>
