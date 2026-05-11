@@ -4,50 +4,52 @@
 
 @layer base {
   :root {
-    --background: 30 20% 97%;
-    --foreground: 25 25% 15%;
+    --background: 40 30% 98%;
+    --foreground: 30 15% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 25 25% 15%;
+    --card-foreground: 30 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 25 25% 15%;
+    --popover-foreground: 30 15% 20%;
 
-    --primary: 340 45% 55%;
+    --primary: 30 15% 25%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 20% 93%;
-    --secondary-foreground: 25 25% 20%;
+    --secondary: 40 20% 95%;
+    --secondary-foreground: 30 15% 25%;
 
-    --muted: 30 15% 92%;
-    --muted-foreground: 25 10% 50%;
+    --muted: 40 15% 94%;
+    --muted-foreground: 30 8% 52%;
 
-    --accent: 200 35% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 35 25% 88%;
+    --accent-foreground: 30 15% 20%;
 
-    --destructive: 0 70% 60%;
+    --destructive: 0 65% 58%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 15% 88%;
-    --input: 30 15% 88%;
-    --ring: 340 45% 55%;
+    --border: 35 18% 90%;
+    --input: 35 18% 90%;
+    --ring: 30 15% 25%;
 
     --radius: 1rem;
 
-    --soft-rose: #c47a8a;
-    --soft-sage: #8aab9b;
-    --soft-sand: #c9a87c;
-    --soft-lavender: #9b8db5;
-    --soft-blush: #e8c4cc;
+    --ink: #2e2820;
+    --warm-mid: #7a7068;
+    --warm-light: #b8afa6;
+    --cream: #faf8f5;
+    --milk: #f5f2ee;
+    --linen: #ede9e3;
+    --taupe: #c8c0b6;
 
-    --sidebar-background: 30 20% 95%;
-    --sidebar-foreground: 25 25% 20%;
-    --sidebar-primary: 340 45% 55%;
+    --sidebar-background: 40 25% 97%;
+    --sidebar-foreground: 30 15% 25%;
+    --sidebar-primary: 30 15% 25%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 30 15% 90%;
-    --sidebar-accent-foreground: 25 25% 20%;
-    --sidebar-border: 30 15% 85%;
-    --sidebar-ring: 340 45% 55%;
+    --sidebar-accent: 40 15% 93%;
+    --sidebar-accent-foreground: 30 15% 25%;
+    --sidebar-border: 35 18% 90%;
+    --sidebar-ring: 30 15% 25%;
   }
 }
 
@@ -59,6 +61,7 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Golos Text", sans-serif;
+    background-color: #faf8f5;
   }
 }
 
@@ -68,71 +71,64 @@
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, var(--soft-rose), var(--soft-lavender));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .gradient-text-warm {
-    background: linear-gradient(135deg, var(--soft-sand), var(--soft-rose));
+    background: linear-gradient(135deg, #2e2820, #7a7068);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(196, 122, 138, 0.12);
-    box-shadow: 0 2px 16px rgba(180, 130, 120, 0.06);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(180, 168, 155, 0.18);
+    box-shadow: 0 2px 12px rgba(120, 100, 80, 0.06);
   }
 
   .gradient-btn {
-    background: linear-gradient(135deg, var(--soft-rose), var(--soft-lavender));
+    background: #2e2820;
     transition: all 0.3s ease;
     color: #fff;
   }
 
   .gradient-btn:hover {
-    background: linear-gradient(135deg, var(--soft-lavender), var(--soft-rose));
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(196, 122, 138, 0.3);
+    background: #47392c;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(46, 40, 32, 0.18);
   }
 
   .mesh-bg {
     background:
       radial-gradient(
-        ellipse at 15% 40%,
-        rgba(232, 196, 204, 0.45) 0%,
+        ellipse at 10% 30%,
+        rgba(220, 212, 200, 0.55) 0%,
         transparent 55%
       ),
       radial-gradient(
-        ellipse at 85% 15%,
-        rgba(155, 141, 181, 0.25) 0%,
+        ellipse at 90% 10%,
+        rgba(235, 228, 218, 0.45) 0%,
         transparent 50%
       ),
       radial-gradient(
-        ellipse at 55% 85%,
-        rgba(138, 171, 155, 0.25) 0%,
-        transparent 50%
+        ellipse at 50% 90%,
+        rgba(210, 205, 195, 0.35) 0%,
+        transparent 55%
       ),
-      hsl(30 20% 97%);
+      #faf8f5;
   }
 
   .tab-active {
-    background: linear-gradient(135deg, var(--soft-rose), var(--soft-lavender));
-    color: white;
+    background: #2e2820;
+    color: #faf8f5;
   }
 
   .card-hover {
-    transition: all 0.3s ease;
+    transition: all 0.28s ease;
   }
 
   .card-hover:hover {
-    transform: translateY(-4px);
-    border-color: rgba(196, 122, 138, 0.25);
-    box-shadow: 0 12px 40px rgba(196, 122, 138, 0.12);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(100, 85, 65, 0.1);
+    border-color: rgba(120, 100, 80, 0.18);
   }
 
   @keyframes float {
@@ -141,35 +137,14 @@
       transform: translateY(0px);
     }
     50% {
-      transform: translateY(-8px);
-    }
-  }
-
-  @keyframes pulse-ring {
-    0% {
-      box-shadow: 0 0 0 0 rgba(196, 122, 138, 0.35);
-    }
-    70% {
-      box-shadow: 0 0 0 15px rgba(196, 122, 138, 0);
-    }
-    100% {
-      box-shadow: 0 0 0 0 rgba(196, 122, 138, 0);
-    }
-  }
-
-  @keyframes shimmer {
-    0% {
-      background-position: -200% center;
-    }
-    100% {
-      background-position: 200% center;
+      transform: translateY(-6px);
     }
   }
 
   @keyframes slide-up {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(18px);
     }
     to {
       opacity: 1;
@@ -189,30 +164,10 @@
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-
-  .animate-pulse-ring {
-    animation: pulse-ring 2s infinite;
-  }
-
   .animate-slide-up {
-    animation: slide-up 0.5s ease forwards;
+    animation: slide-up 0.45s ease forwards;
   }
-
   .animate-fade-in {
-    animation: fade-in 0.4s ease forwards;
-  }
-
-  .shimmer-text {
-    background: linear-gradient(
-      90deg,
-      var(--soft-rose),
-      var(--soft-lavender),
-      var(--soft-rose)
-    );
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: shimmer 3s linear infinite;
+    animation: fade-in 0.35s ease forwards;
   }
 }
